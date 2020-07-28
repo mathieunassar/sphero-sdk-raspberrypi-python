@@ -13,6 +13,9 @@ class RvrFwCheckAsync(CmsFwCheckBase):
         self.__rvr = self
 
     async def _check_rvr_fw(self):
+        print('Not checking the firmware version, see https://community.sphero.com/t/concurrent-futures-base-timeouterror/1864')
+        return
+    
         """Checks the RVR's firmware on the Nordic and ST chips against the CMS, if an internet connection is available.
         """
         root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../../'))
